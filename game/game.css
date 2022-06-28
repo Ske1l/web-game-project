@@ -16,10 +16,14 @@
     background-color: blue;
     position: relative;
     top: 440px;
-    animation-name: jump;
+    /* animation-name: jump;
     animation-timing-function: linear;
     animation-duration: 1s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite; */
+}
+
+.animate {
+    animation: jump 1s;
 }
 
 @keyframes jump {
