@@ -26,16 +26,8 @@ function jump() {
 //         obstacle.style.animation = "none"
 //         alert("you lose")
 //     };
-// }; failed attempt at x,y collision
+// }; failed attempt at x,y collision. leaving here as an example for future attemps with different css or JS.
 
-// let scoreCheck = setInterval(function () {
-//     let characterTop =
-//         parseInt(window.getComputedStyle(character).getPropertyValue("top"))
-//     let objectLeft =
-//         parseInt(window.getComputedStyle(obstacle).getPropertyValue("left"));
-//     ;
-
-// }, 10);
 
 let checkCollision = setInterval(function () {
     document.getElementById('score').innerHTML = "Score: " + score;

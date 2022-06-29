@@ -16,7 +16,11 @@ body {
 }
 
 #h1 {
-    color: black;
+    color: transparent;
+    position: absolute;
+    top: 250px;
+    left: 400px;
+    font-style: italic;
 }
 
 #background {
@@ -94,6 +98,6 @@ body {
 
 #score {
     width: 800px;
-    height: 200px;
+    height: 0px;
     background-color: black;
 }
