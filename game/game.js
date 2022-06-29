@@ -15,11 +15,7 @@ function jump() {
         character.classList.remove("animate");
     }, 1000);
 }
-function draw() {
-    background("white");
-    textSize(30);
-    text(score, 400, 100)
-}
+
 // fuction checkCollision(character, obstacle){
 //     if (
 //         character.x + character.width >= obstacle.x &&
@@ -32,18 +28,17 @@ function draw() {
 //     };
 // }; failed attempt at x,y collision
 
-let scoreCheck = setInterval(function () {
-    let characterTop =
-        parseInt(window.getComputedStyle(character).getPropertyValue("top"))
-    let objectLeft =
-        parseInt(window.getComputedStyle(obstacle).getPropertyValue("left"));
-    if (objectLeft < 30 && objectLeft > 0 && characterTop <= 410) {
-        score++;
-    };
+// let scoreCheck = setInterval(function () {
+//     let characterTop =
+//         parseInt(window.getComputedStyle(character).getPropertyValue("top"))
+//     let objectLeft =
+//         parseInt(window.getComputedStyle(obstacle).getPropertyValue("left"));
+//     ;
 
-}, 10);
+// }, 10);
 
 let checkCollision = setInterval(function () {
+    document.getElementById('score').innerHTML = "Score: " + score;
     let characterTop =
         parseInt(window.getComputedStyle(character).getPropertyValue("top"))
     let objectLeft =
@@ -51,6 +46,8 @@ let checkCollision = setInterval(function () {
     if (objectLeft < 30 && objectLeft > 0 && characterTop >= 410) {
         obstacle.style.animation = "none"
         document.getElementById("h1").style.color = "blue";
+    } if (objectLeft < 30 && objectLeft > 0 && characterTop <= 410) {
+        score++;
     };
 
 }, 10);
